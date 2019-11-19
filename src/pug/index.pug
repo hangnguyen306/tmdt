@@ -1,0 +1,157 @@
+extends layouts/_layout_default
+
+block setting
+    - title = "CÔNG TY CỔ PHẦN DẦU KHÍ MIỀN NAM"
+    - mainActive = "home"
+
+block content
+    .sBanner
+        .sBannerInner
+            .image: img(src=imgPath + 'banner.jpg' alt="")
+            .image: img(src=imgPath + 'banner.jpg' alt="")
+            .image: img(src=imgPath + 'banner.jpg' alt="")
+    .sMainContent
+        .container
+            .sStep
+                ul
+                    li
+                        span.icon-img
+                        span.txt-text Bước 1: <br>Đặt hàng trên website
+                    li
+                        span.icon-img
+                        span.txt-text Bước 2: <br>Nhân viên liên hệ xác nhận
+                    li
+                        span.icon-img
+                        span.txt-text Bước 3: Giao Gas: 15 phút<br>Sản phẩm khác: 24 giờ
+                    li
+                        span.icon-img
+                        span.txt-text Bước 4: <br>Hoàn thành đơn hàng
+            .page-header.text-center
+                h3 
+                    span.icon-1
+                    span.txt0-text ƯU đãi hấp dẫn
+            .sBoxSlider
+                .sBoxSliderInner
+                    .item
+                        a(href="#"): img(src=imgPath + 'img01.jpg')
+                    .item
+                        a(href="#"): img(src=imgPath + 'img02.jpg')
+                    .item
+                        a(href="#"): img(src=imgPath + 'img01.jpg')
+                    .item
+                        a(href="#"): img(src=imgPath + 'img02.jpg')
+    .sMainContent-2
+        .container
+            .row
+                .col-sm-7
+                    .page-header
+                        h3 
+                            span.icon-2
+                            span.txt0-text Combo nổi bật
+                .col-sm-5.text-right
+                    a(href="#").v-more Xem tất cả
+            .sBoxProduct
+                .item.itemStart
+                    .image
+                        a(href="#"): img(src=imgPath + 'img03.jpg')
+                        span.icon-discount Giảm <br>25%
+                        
+                    .info
+                        h3: a(href="#") Combo gia đình nhỏ
+                        .price 
+                            span.txt-old 850.000đ
+                            span.txt-new 637.500đ
+                        ul 
+                            li 5 kg gạo
+                            li 1 bình Gas
+                            li 1 chai nước mắm Chinsu
+                            li 1 chai dầu ăn Neptune
+                - for (var x = 1; x < 4; x++)
+                    .item
+                        .image
+                            a(href="#"): img(src=imgPath + 'img04.jpg')
+                            span.icon-discount.icon-yellow Giảm <br>25%
+                            .btn-group-btn
+                                a(href="#").v-more-1 Xem chi tiết 
+                                a(href="#").v-more-2 Mua ngay
+                        .info
+                            h3: a(href="#") Combo món ngọt : Bột mì, bột gạo, kem nguyên 
+                            .price 
+                                span.txt-old 850.000đ
+                                span.txt-new 637.500đ
+    .sMainContent-3
+        .container
+            .page-header-2
+                h3 
+                    span.icon-3
+                    span.txt0-text Bình gas
+            .sProducList.sBoxProduct
+                - for (var x = 1; x < 5; x++)
+                    .item
+                        .itemWrap
+                            .image
+                                a(href="#"): img(src=imgPath + 'img05.png')
+                            .info
+                                h3: a(href="#") Bình SGAS Cam lớn
+                                .price 
+                                    span.txt-new 637.500đ
+                                    span.txt-old 850.500đ
+    .sMainContent-4
+        .container
+            .page-header-2
+                .row
+                    .col-sm-7
+                        h3 
+                            span.icon-4
+                            span.txt0-text Thiết bị gas
+                    .col-sm-5.text-right
+                        a(href="#").v-more.v-more-white Xem tất cả
+            .sProducList-2.sBoxProduct
+                - for (var x = 1; x < 11; x++)
+                    .item
+                        .itemWrap
+                            .image
+                                a(href="#"): img(src=imgPath + 'img06.png' alt="")
+                            .info
+                                h3: a(href="#") Combo món ngọt : Bột mì, bột gạo, kem nguyên 
+                                .price 
+                                    span.txt-new 637.500đ
+                                    span.txt-old 850.500đ
+    .sMainContent-5
+        .container
+            .page-header.text-center
+                h3 Tin tức - chia sẻ
+            .sNewGrid
+                - for (var x = 1; x < 4; x++)
+                    .item
+                        .image
+                            a(href="#"): img(src=imgPath + 'img07.png' alt="")
+                        .info
+                            a(href="#").txt-cate MẸO VẶT _
+                            h4: a(href="#") Mẹo dùng bếp gas tiết kiệm bà nội trợ cần biết              
+                            p Những bà mẹ đã lưu lại những mẹo vặt rất hữu ích trong nhà bếp, sau đó truyền cho các thế hệ tiếp theo. Biết được một vài mẹo sau, chắc ... 
+            .text-right
+                a(href="#").v-more Xem thêm
+    .sMainContent-6
+        .container
+            .sGridValue     
+                .item
+                    .image
+                        img(src=imgPath + 'icon-1.svg' alt="")
+                    h4 Sản phẩm đa dạng
+                    p Giá cả hợp lý, luôn có các chương trình khuyến mãi thường xuyên
+                .item
+                    .image
+                        img(src=imgPath + 'icon-2.svg' alt="")
+                    h4 Sản phẩm đa dạng
+                    p Giá cả hợp lý, luôn có các chương trình khuyến mãi thường xuyên
+                .item 
+                    .image
+                        img(src=imgPath + 'icon-3.svg' alt="")
+                    h4 Sản phẩm đa dạng
+                    p Giá cả hợp lý, luôn có các chương trình khuyến mãi thường xuyên
+                .item 
+                    .image
+                        img(src=imgPath + 'icon-4.svg' alt="")
+                    h4 Sản phẩm đa dạng
+                    p Giá cả hợp lý, luôn có các chương trình khuyến mãi thường xuyên

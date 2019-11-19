@@ -1,0 +1,33 @@
+header.header
+    .container
+        .row
+            .col-md-3.col-6
+                a.navbar-brand(href=url)
+                    img(src= imgPath + "logo.png" alt="" )
+            .col-md-9.col-6
+                a.header__toggle(href='#')
+                    span
+                    span
+                    span
+                    span
+                .wrapMenu
+                    .mainMenuInner
+                        .navRight
+                            .sBoxSearch
+                                .form-style
+                                    input(type="text" placerholder="Tìm kiếm").form-control
+                                    button.btn-search
+                                        i.icon-search
+                            ul
+                                li: a(href="#") Đăng kí
+                                li: a(href="#") Đăng nhập
+                        .mainMenu
+                            +menuNav(mainActive,mainMenu, '', '', '', '' ,'', '')   
+                            .sBoxCart
+                                a(href="#")
+                                    i.icon-cart
+                                    | Giỏ hàng
+    .headerInner
+        .container
+            a(href=url)
+                img(src= imgPath + "logo.png" alt="" )

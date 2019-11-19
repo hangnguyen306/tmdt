@@ -1,0 +1,140 @@
+extends layouts/_layout_default
+
+block setting
+    - title = "CÔNG TY CỔ PHẦN DẦU KHÍ MIỀN NAM"
+    - mainActive = "home"
+
+block content
+    .sMainBread
+        .container
+            +breadcrumb([{'title':'Sản phẩm','link':'#'},{'title':'Thiết bị Gas'}])
+    .sMainContent
+        .container
+            .row
+                .col-sm-2
+                    .page-header-3 Danh mục sản phẩm
+                    ul.menuList
+                        li: a(href="#") Bình Gas
+                        li: a(href="#") Thiết bị Gas
+                        li: a(href="#") Combo sản phẩm
+                    .sBoxFilter
+                        p Bộ lọc
+                        .form-group
+                            .custom-control.custom-checkbox
+                                input#customCheck.custom-control-input(type='checkbox', name='example1')
+                                label.custom-control-label(for='customCheck') Combo
+                            .custom-control.custom-checkbox
+                                input#customCheck2.custom-control-input(type='checkbox', name='example2')
+                                label.custom-control-label(for='customCheck2') Khuyến mãi
+                            .custom-control.custom-checkbox
+                                input#customCheck2.custom-control-input(type='checkbox', name='example3')
+                                label.custom-control-label(for='customCheck2') Nổi bật
+                        p Theo khoảng giá
+                        .form-group
+                            label Từ: 
+                            select.selectpicker.form-control(title="Thấp nhất")
+                                option(value="Sample") Sample
+                                option(value="Sample") Sample
+                        .form-group
+                            label Đến: 
+                            select.selectpicker.form-control(title="Cao nhất")
+                                option(value="Sample") Sample
+                                option(value="Sample") Sample
+                        .form-group
+                            .custom-control.custom-radio
+                                input#exampleRadios1.custom-control-input(type='radio', name='customRadio' checked)
+                                label.custom-control-label(for='exampleRadios1') Dưới 500k
+                            .custom-control.custom-radio
+                                input#exampleRadios2.custom-control-input(type='radio', name='customRadio')
+                                label.custom-control-label(for='exampleRadios2') 500k - 1.000k
+                            .custom-control.custom-radio
+                                input#exampleRadios3.custom-control-input(type='radio', name='customRadio')
+                                label.custom-control-label(for='exampleRadios3') Trên 1.000k
+                    .page-header-3 Sản phẩm đã xem
+                    .sProducList.sBoxProduct.sProducListCol
+                        - for (var x = 1; x < 4; x++)
+                            .item
+                                .itemWrap
+                                    .image
+                                        a(href="#"): img(src=imgPath + 'img09.png')
+                                    .info
+                                        h3: a(href="#") Bình SGAS Cam lớn
+                                        
+                .col-sm-10
+                    .page-header-2.page-header-2-gray
+                        .row
+                            .col-sm-7
+                                h3 
+                                    span.icon-5
+                                    span.txt0-text Thiết bị gas
+                            .col-sm-3.ml-auto.align-self-center
+                                .form-style.sSortBox
+                                    .form-group
+                                        label Sắp xếp theo
+                                        .inputDiv
+                                            select.selectpicker.form-control(title="Mặc định")
+                                                option(value="Sample") Sample
+                                                option(value="Sample") Sample
+                    .sProducList-2.sBoxProduct.sProducListCol.sProducListColLeft
+                        .row
+                            - for (var x = 1; x < 17; x++)
+                                .col-md-3.col-sm-6
+                                    .item
+                                        .itemWrap
+                                            .image
+                                                a(href="#"): img(src=imgPath + 'img06.png' alt="")
+                                            .info
+                                                h3: a(href="#") Combo món ngọt : Bột mì, bột gạo, kem nguyên 
+                                                .price 
+                                                    span.txt-new 637.500đ
+                                                    span.txt-old 850.500đ
+                    .sPaiging
+                        +pagination([
+                            {text:'<i class="arrow_carrot-left"></i>',url:'#'},
+                            {text:'1',url:'#'},
+                            {text:'2',url:'#'},
+                            {text:'3',url:'#'},
+                            {text:'...',url:'#'},
+                            {text:'<span>Cuối</span><i class="arrow_carrot-right"></i>',url:'#'}
+                        ])
+    .sMainContent-5
+        .container
+            .row
+                .col-sm-8
+                    .page-header
+                        h3 KHUYẾN MÃI VÀ SỰ KIỆN
+                .col-sm-2.ml-auto
+                    a(href="#").v-more Xem tất cả
+            .sNewGrid-2
+                .row
+                    - for (var x = 1; x < 5; x++)
+                        .col-md-3.col-sm-6
+                            .item
+                                .image
+                                    a(href="#"): img(src=imgPath + 'img08.png' alt="")
+                                .info
+                                    .date 12/9/2019 - 15/9/2019
+                                    h4: a(href="#") Tặng 1 voucher mua Gas 100.000đ & Hộp Quẹt Gas Khi mua Cà phê Kofi Kai         
+    .sMainContent-6
+        .container
+            .sGridValue     
+                .item
+                    .image
+                        img(src=imgPath + 'icon-1.svg' alt="")
+                    h4 Sản phẩm đa dạng
+                    p Giá cả hợp lý, luôn có các chương trình khuyến mãi thường xuyên
+                .item
+                    .image
+                        img(src=imgPath + 'icon-2.svg' alt="")
+                    h4 Sản phẩm đa dạng
+                    p Giá cả hợp lý, luôn có các chương trình khuyến mãi thường xuyên
+                .item 
+                    .image
+                        img(src=imgPath + 'icon-3.svg' alt="")
+                    h4 Sản phẩm đa dạng
+                    p Giá cả hợp lý, luôn có các chương trình khuyến mãi thường xuyên
+                .item 
+                    .image
+                        img(src=imgPath + 'icon-4.svg' alt="")
+                    h4 Sản phẩm đa dạng
+                    p Giá cả hợp lý, luôn có các chương trình khuyến mãi thường xuyên

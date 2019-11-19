@@ -1,0 +1,145 @@
+// Sample code
+.footer {
+    padding: rem(60) 0 0px 0;
+    h4{
+            font-style: normal;
+            font-weight: bold;
+            font-size: rem(14);
+            line-height: 170%;
+            text-transform: uppercase;
+    }
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li{
+            >a{
+                display: block;
+                font-style: normal;
+                font-weight: 600;
+                font-size: rem(14);
+                line-height: 170%;
+                color: #373435;
+                margin: 0 0 5px 0;
+                @include transition();
+                &:hover{
+                    color: #FD9C2C;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .sForm{
+        position: relative;
+        margin: 0 0 rem(30) 0;
+        .form-control{
+            background: #FFFFFF;
+            border: 1px solid #808084;
+            box-sizing: border-box;
+            border-radius: 2px; 
+        }
+        button.btn-sm {
+            font-family: Nunito Sans;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 12px;
+            line-height: 170%;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            background: #FD9C2C;
+            border-radius: 1px;
+            border: none;
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            bottom: 2px;
+            outline: none;
+        }
+    }
+    .sShare a {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 13px;
+        img{
+            @include transition();
+            opacity: 1;
+        }
+        &:hover{
+            img{
+                opacity: .6;
+            }
+        }
+    }
+    .sHotline {
+        a {
+            background: #FD9C2C;
+            border-radius: 58px;
+            display: block;
+            font-size: 24px;
+            line-height: 150%;
+            color: #D82438;
+            font-weight: bold;
+            position: relative;
+            height: 53px;
+            padding-left: 60px;
+            display: flex;
+            align-items: center;
+            @include transition();
+            &:before{
+                background: #D82438;
+                border-radius: 50%;
+                width: 42px;
+                height: 42px;
+                position: absolute;
+                left: 6px;
+                top: 6px;
+                content: '';
+            }
+            &:after{
+                content: '';
+                left: 6px;
+                top: 6px;
+                width: 42px;
+                height: 42px;
+                position: absolute;
+                background-repeat: no-repeat;
+                background-size: 24px;
+                background-position: center;
+                background-image: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.67615 15.9626C8.56989 18.2263 10.8495 20.0087 13.4514 21.2698C14.4421 21.7393 15.7669 22.2963 17.2429 22.3918C17.3344 22.3957 17.4219 22.3997 17.5134 22.3997C18.5041 22.3997 19.2998 22.0576 19.9483 21.3534C19.9522 21.3494 19.9602 21.3414 19.9642 21.3335C20.1949 21.055 20.4575 20.8043 20.732 20.5378C20.919 20.3588 21.11 20.1718 21.293 19.9808C22.1404 19.0976 22.1404 17.9757 21.285 17.1203L18.894 14.7293C18.4882 14.3075 18.0028 14.0847 17.4936 14.0847C16.9843 14.0847 16.495 14.3075 16.0772 14.7253L14.6529 16.1496C14.5217 16.074 14.3864 16.0063 14.2591 15.9427C14.0999 15.8631 13.9527 15.7875 13.8214 15.704C12.5245 14.8804 11.3468 13.8063 10.2209 12.4257C9.65203 11.7056 9.2701 11.1009 9.00354 10.4843C9.37752 10.1461 9.72762 9.792 10.0658 9.44587C10.1851 9.32254 10.3085 9.19921 10.4318 9.07588C10.8615 8.64621 11.0922 8.1489 11.0922 7.64364C11.0922 7.13837 10.8655 6.64107 10.4318 6.21139L9.24623 5.02582C9.10698 4.88657 8.97569 4.7513 8.84043 4.61206C8.57785 4.34152 8.30334 4.06303 8.0328 3.81239C7.62302 3.41056 7.14163 3.19971 6.63239 3.19971C6.12712 3.19971 5.64175 3.41056 5.21606 3.81637L3.72812 5.30431C3.18705 5.84538 2.88071 6.50182 2.81705 7.2617C2.74146 8.21255 2.91651 9.22308 3.37006 10.4445C4.06629 12.3342 5.1166 14.0887 6.67615 15.9626ZM3.78779 7.34525C3.83554 6.81612 4.03844 6.37451 4.42037 5.99258L5.90035 4.5126C6.1311 4.2898 6.38572 4.17443 6.63239 4.17443C6.87507 4.17443 7.12174 4.2898 7.34851 4.52055C7.61506 4.76722 7.86571 5.02582 8.13624 5.30033C8.27151 5.43957 8.41075 5.57882 8.55 5.72204L9.73558 6.90762C9.98224 7.15429 10.1096 7.40493 10.1096 7.65159C10.1096 7.89826 9.98224 8.1489 9.73558 8.39556C9.61225 8.5189 9.48891 8.64621 9.36558 8.76954C8.99559 9.14351 8.64946 9.49759 8.26753 9.83576C8.25957 9.84372 8.25559 9.8477 8.24764 9.85565C7.91743 10.1859 7.96915 10.5002 8.04871 10.7389C8.05269 10.7508 8.05667 10.7588 8.06065 10.7707C8.36699 11.5067 8.79268 12.2069 9.45709 13.0424C10.6506 14.5144 11.9078 15.6562 13.2923 16.5355C13.4634 16.6469 13.6464 16.7344 13.8175 16.8219C13.9766 16.9015 14.1238 16.9771 14.2551 17.0606C14.271 17.0686 14.2829 17.0765 14.2989 17.0845C14.4301 17.1521 14.5575 17.184 14.6848 17.184C15.003 17.184 15.2099 16.9811 15.2776 16.9134L16.7655 15.4255C16.9962 15.1947 17.2469 15.0714 17.4936 15.0714C17.7959 15.0714 18.0426 15.2584 18.1977 15.4255L20.5967 17.8205C21.0742 18.2979 21.0702 18.8151 20.5848 19.3204C20.4177 19.4994 20.2427 19.6705 20.0557 19.8495C19.7772 20.1201 19.4868 20.3985 19.2242 20.7128C18.7667 21.2062 18.2216 21.4369 17.5174 21.4369C17.4498 21.4369 17.3782 21.4329 17.3105 21.429C16.0056 21.3454 14.7922 20.8362 13.8811 20.4025C11.4065 19.205 9.23429 17.5062 7.43205 15.3499C5.94809 13.5636 4.9495 11.9006 4.28908 10.1182C3.8793 9.02416 3.72414 8.14492 3.78779 7.34525Z' fill='white'/%3E%3Cpath d='M13.6001 6.80005C13.6001 6.80005 15.3044 6.79976 16.6001 8.09576C17.8958 9.39177 17.8001 11.5998 17.8001 11.5998' stroke='white' stroke-linecap='round'/%3E%3Cpath d='M21.4001 13.3613C21.4001 13.3613 22.2821 9.37974 19.6001 6.16133C16.6001 2.56133 12.4001 3.25301 12.4001 3.25301' stroke='white' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+            }
+            &:hover{
+                background: #D82438; 
+                color:white;
+                text-decoration: none;
+            }
+        }
+    }
+    .btnDiv{
+        p{
+            font-style: normal;
+            font-weight: bold;
+            font-size: rem(14);
+            line-height: 170%;
+            text-transform: uppercase;
+            color: #373435;
+        }
+        img{
+            max-width: 100px;
+        }
+    }
+    .copyright {
+        border-top: 1px solid rgba(191, 191, 193, 0.3);
+        margin-top: 20px;
+        padding-top: 20px;
+        font-size: 14px;
+    }
+    .sPay {
+        margin-bottom: 19px;
+        margin-top: 15px;
+        a{
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 10px;
+        }
+    }
+}

@@ -1,0 +1,34 @@
+extends layouts/_layout_default
+
+block setting
+    - title = "CÔNG TY CỔ PHẦN DẦU KHÍ MIỀN NAM"
+    - mainActive = "home"
+
+block content
+    .sMainContent
+        .container
+            .sBanerChild
+                img(src=imgPath + 'banner-1.jpg' alt="")
+            .row
+                .col-md-9
+                    .sBoxpromo
+                        - for (var x = 1; x < 5; x++)
+                            .item
+                                .image
+                                    a(href="#"): img(src=imgPath + 'img08.png' alt="")
+                                .info
+                                    h4: a(href="#") Tặng 1 voucher mua Gas 100.000đ & Hộp Quẹt Gas Khi mua Cà phê Kofi Kai         
+                                    p Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups
+                                    .date 12/9/2019 - 15/9/2019
+                    .text-center
+                        a.btn-outline-red(href="#") Xem thêm
+                .col-md-3
+                    .sBoxAdv
+                        a(href="#"): img(src=imgPath + 'adv.png' alt="")
+                    .sBoxApp
+                        h3.text-center Ứng dụng đặt Gas24h
+                        p Đặt Gas nhanh chóng qua điện thoại chỉ trong vào 3 thao tác đơn giản, có cơ hội trúng sổ xố hàng tuần của Gas24h
+                        .text-center
+                            img(src=imgPath + 'iphone-1.png' alt="")
+                        a(href="#").v-more-2 Tìm hiểu ngay
+            

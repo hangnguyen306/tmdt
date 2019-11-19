@@ -1,0 +1,49 @@
+.sWhite {
+    background: white;
+    padding-top: rem(60);
+    padding-bottom: rem(60);
+}
+
+.sBusiness {
+    &Item {
+        margin-bottom: rem(60);
+
+        .image {
+            img {
+                max-width: 100%;
+            }
+        }
+
+        .info {
+            h3 {
+                color: #D82438;
+                font-size: rem(28);
+                font-weight: normal;
+                line-height: (34/28);
+                font-family: $font-other;
+                margin: 0;
+                padding: 10px 0 10px 0;
+
+                a {
+                    color: inherit;
+                }
+            }
+
+            p {
+                line-height: 2;
+                margin: 0 0 14px 0;
+            }
+        }
+
+        &:nth-child(2n) {
+            .image {
+                order: 2;
+            }
+            @media (max-width: 991.98px) {
+                .image {
+                    order: 0;
+                }
+            }
+        }
+    }
+}

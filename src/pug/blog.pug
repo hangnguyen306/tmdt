@@ -1,0 +1,56 @@
+extends layouts/_layout_default
+
+block setting
+    - title = "CÔNG TY CỔ PHẦN DẦU KHÍ MIỀN NAM"
+    - mainActive = "home"
+
+block content
+    .sMainBread
+        .container
+            +breadcrumb([{'title':'Bài viết'}])
+    .sMainContent
+        .container
+            .row
+                .col-md-7
+                    .sNewGrid-2
+                        .item
+                            .image
+                                a(href="#"): img(src=imgPath + 'img10.png' alt="")
+                            .info
+                                h3: a(href="#") Vì sao bạn nên chọn sử dụng Gas24h: an toàn, đa dạng, bảo hành, đại lý rộng khắp
+                                .date 12/9/2019 - 15/9/2019
+                                p Bắt đầu hoạt động từ năm 2006, đến nay Gas24h đã sở hữu bề dày kinh nghiệm 13 năm trong lĩnh vực cung ứng gas và bếp gas uy tín, quy trình khai thác - sản xuất - đóng bình được giám sát nghiêm ngặt, được kiểm duyệt đảm bảo quy chuẩn an toàn Phòng Cháy Chữa Cháy. 
+                .col-md-5
+                    .sNewGrid-2
+                        - for (var x = 1; x < 5; x++)
+                            .item   
+                                .row
+                                    .image.col-5.imagesmall
+                                        a(href="#"): img(src=imgPath + 'img11.png' alt="")
+                                    .info.col-7.infosmall
+                                        h4: a(href="#") Ra mắt ứng dụng Gas24h – Đặt gas chỉ qua một chạm    
+                                        .date 12/9/2019 - 15/9/2019
+                                        p Nhanh chóng, tiện lợi, trả tiền trực tiếp khi nhận gas, còn được tích lũy tiền cho lần mua sau
+
+            .row.sBoxGird
+                .col-md-7
+                    .sNewGrid-2
+                        - for (var x = 1; x < 5; x++)
+                            .item   
+                                .row
+                                    .image.col-4.imagesmall
+                                        a(href="#"): img(src=imgPath + 'img11.png' alt="")
+                                    .info.col-8.infosmall
+                                        h4: a(href="#") Ra mắt ứng dụng Gas24h – Đặt gas chỉ qua một chạm    
+                                        .date 12/9/2019 - 15/9/2019
+                                        p Nhanh chóng, tiện lợi, trả tiền trực tiếp khi nhận gas, còn được tích lũy tiền cho lần mua sau
+                    .sPaiging
+                        +pagination([
+                            {text:'<i class="arrow_carrot-left"></i>',url:'#'},
+                            {text:'1',url:'#'},
+                            {text:'2',url:'#'},
+                            {text:'3',url:'#'},
+                            {text:'...',url:'#'},
+                            {text:'<span>Cuối</span><i class="arrow_carrot-right"></i>',url:'#'}
+                        ])
+            

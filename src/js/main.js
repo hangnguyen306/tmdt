@@ -80,7 +80,28 @@ function sBoxSlider(){
         slidesToScroll: 2,
     });
 }
-
+function sSliderNewsInner(){
+    var el = $('.sSliderNewsInner');
+    el.slick({
+        infinite: true,
+        slidesToShow: 1,
+        dots: false,
+        arrows: false,
+        speed: 300,
+        variableWidth: true
+    });
+}
+function sSliderNewsInner2(){
+    var el = $('.sSliderNewsInner2');
+    el.slick({
+        infinite: true,
+        slidesToShow: 1,
+        dots: false,
+        arrows: false,
+        speed: 300,
+        variableWidth: true
+    });
+}
 function init(){
     // Base
     ui();
@@ -88,6 +109,8 @@ function init(){
     news();
     sBaner();
     sBoxSlider();
+    sSliderNewsInner();
+    sSliderNewsInner2();
     $(window).on("debouncedresize", function( event ) {
         // ...
     });

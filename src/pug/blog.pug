@@ -53,4 +53,23 @@ block content
                             {text:'...',url:'#'},
                             {text:'<span>Cuối</span><i class="arrow_carrot-right"></i>',url:'#'}
                         ])
-            
+                .col-md-5
+                    .page-header-4 Từ khoá nổi bật
+                    .sTag
+                        a(href="#") Đặt Gas24h
+                        a(href="#") Phòng cháy - chữa cháy
+                        a(href="#") Tập đoàn Daukhimiennam
+                        a(href="#") Ứng dụng đặt Gas
+                    .page-header-4 Khuyến mãi nổi bật
+                    .sSliderNews.sNewGrid-2
+                        .sSliderNewsInner
+                            - for (var x = 1; x < 5; x++)
+                                .item   
+                                    .itemWrap      
+                                        .image
+                                            a(href="#"): img(src=imgPath + 'img08.png' alt="")
+                                        .info
+                                            h4: a(href="#") Ra mắt ứng dụng Gas24h – Đặt gas chỉ qua một chạm    
+                                            .date 12/9/2019 - 15/9/2019
+                                            p Nhanh chóng, tiện lợi, trả tiền trực tiếp khi nhận gas, còn được tích lũy tiền cho lần mua sau
+

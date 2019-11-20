@@ -1,0 +1,80 @@
+extends layouts/_layout_default
+
+block setting
+    - title = "CÔNG TY CỔ PHẦN DẦU KHÍ MIỀN NAM"
+    - mainActive = "home"
+
+block content
+    .sMainContent
+        .container
+            .row
+                .col-sm-8
+                    h3.title-page Nhân viên điều phối giao hàng
+                    .sContentCarree
+                        h3  Phúc lợi
+                        .sCarreeBox
+                            .sCarree01 Mức lương = lương cơ bản + lương năng suất + thưởng năng suất; (Trao đổi chi tiết khi phỏng vấn): 9 -> 12 triệu/tháng;
+                            .sCarree02 Được đảm bảo đầy đủ các chế độ Phúc lợi theo Quy định của Pháp luật và của Công ty
+                            .sCarree03 Chế độ đãi ngộ tốt khi có sự gắn bó lâu dài với Công ty
+                        h3 Mô tả công việc
+                        ul
+                            li Lấy hàng (Fulltime)<br>Nhận danh sách địa chỉ cần lấy hàng từ Bộ phận điều phối tại Công ty;<br>Đi lấy hàng theo danh sách địa chỉ khách hàng thuộc khu vực phụ trách;
+                            li Hoặc: Giao hàng <br>Tiếp nhận hàng từ Bộ phận điều phối tại Công ty;<br>Trực tiếp đi giao hàng theo danh sách địa chỉ khách hàng thuộc khu vực phụ trách;<br>Báo cáo lại kết quả cho nhân viên thu ngân và Điều phối;
+                            li Hoặc: Trung chuyển hàng hóa từ Kho đến với Bộ phận giao hàng.
+                            li Thời gian làm việc <br>Fulltime: 7h30 – 17h30 hoặc 09h00-18h00 hoặc 10h00 – 19h00;
+                            li Hoặc theo ca: Sáng: 07h30. – 12h30; Chiều 13h30 – 18h; Tối 18h – 22h; Thứ 2 – Đến chủ nhật (Nghỉ Thứ 7 hoặc Chủ nhật)
+                            li Sử dụng phương tiện xe máy cá nhân hoặc Ô tô của Công ty để vận chuyển giao hàng;
+                        h3 Yêu cầu công việc
+                        ul
+                            li Lý lịch rõ ràng, có xác nhận của chính quyền địa phương, không có tiền án tiền sự;
+                            li Tinh thần trách nhiệm cao, chịu được áp lực công việc;
+                            li Trung thực, Khả năng giao tiếp tốt;
+                            li Thành thạo đường Khu vực đăng ký là một lợi thế;
+                            li Có xe máy cá nhân
+                            li Hiểu biết cơ bản về Smartphone, Bắt buộc Sử dụng smartphone – hệ điều hành Android 4.2 trở lên;
+                .col-sm-4
+                    .share
+                        label Chia sẻ: 
+                        a(href="#")
+                            i.icon-fb
+                        a(href="#")
+                            i.icon-gl
+                    .sBoxList
+                        .page-header-4 Hồ sơ đính kèm
+                        ul
+                            li Sơ yếu lý lịch có xác nhận của địa phương
+                            li Giấy xác nhận dân sự không tiền án, tiền sự (Xin mẫu tại địa phương);
+                            li Đơn xin việc làm (dùng mẫu trong hồ sơ xin việc) hoặc viết tay
+                            li Giấy bảo lãnh trách nhiệm dân sự (Gia đình sẽ bảo lãnh cho Bạn đi làm tại Công ty) có thể viết bằng tay hoặc dùng mẫu của Công ty: <a href="#"> Download tại ĐÂY</a>
+                            li Chứng minh thư nhân dân công chứng 2 bản
+                            li Sổ hộ khẩu và Giấy khai sinh bản sao
+                            li Giấy khám sức khỏe
+                            li Bằng lái xe máy (nếu có)
+                            li 2 ảnh 3×4
+                    .sBoxadd
+                        .page-header-5
+                            span THÔNG tin liên hệ
+                        .infoContact
+                            h5 Phòng nhân sự - Công ty cổ phần Dầu Khí Miền Nam
+                            table
+                                tr
+                                    td Địa chỉ: 
+                                    td 86 Nguyễn Cửu Vân, Phường 17, Quận Bình Thạnh
+                                tr
+                                    td Điện thoại: 
+                                    td 028 6294 9650
+                                tr
+                                    td Email: 
+                                    td tuyendung@spj.vn
+            .sFormBox.form-style
+                h4 NỘP ĐƠN ỨNG TUYỂN
+                +input-box("text","","","Họ và tên",'','')
+                +input-box("text","","","Email",'','')
+                +input-box("text","","","Số điện thoại",'','')
+                .form-style-item
+                    label(for="")  Đính kèm CV
+                    .custom-file
+                        input#validatedCustomFile.custom-file-input(type='file')
+                        label.custom-file-label(for='validatedCustomFile') Choose file...
+                .snote Cho phép các định dạng: pdf, doc, png, jpg...
+                +a-btn-primary('Ứng tuyển','#','','btn-apply')

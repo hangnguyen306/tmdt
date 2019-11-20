@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700&display=swap&subset=vietnamese");
 body {
   font-family: 'Nunito Sans', sans-serif;
+  line-height: 1.7;
 }
 
 a:focus {

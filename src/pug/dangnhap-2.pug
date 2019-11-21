@@ -1,0 +1,29 @@
+extends layouts/_layout_default
+
+block setting
+    - title = "CÔNG TY CỔ PHẦN DẦU KHÍ MIỀN NAM"
+    - mainActive = "home"
+
+block content
+    .sMainBread
+        .container
+            +breadcrumb([{'title':'Tài khoản','link':'#'},{'title':'Đăng nhập'}])
+    .sMainContent.sLoginPage
+        .container
+            .sLogin
+                a(href="#").btn-back 
+                    i.ic-back
+                    | Trở lại
+                .form-style.form-style-2
+                    h3 
+                        i.ic-phone
+                        | Đăng nhập bằng SMS
+                    .row
+                        .col-8
+                            +input-box("text","","","Số điện thoại",'Nhập Số điện thoại','')
+                        .col-4.align-self-end
+                            a(href="#").v-more-3 Gửi mã xác minh
+                    +input-box("text","","","Mã xác minh",'Nhập mã xác minh','')
+                    .text-center
+                        a(href="#").v-more-4 Đăng nhập
+                        p Bạn đã có tài khoản? <a href="#">Đăng ký</a>

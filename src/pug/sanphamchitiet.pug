@@ -1,0 +1,21 @@
+extends layouts/_layout_default
+
+block setting
+    - title = "CÔNG TY CỔ PHẦN DẦU KHÍ MIỀN NAM"
+    - mainActive = "home"
+
+block content
+    .sMainBread
+        .container
+            +breadcrumb([{'title':'Sản phẩm','link':'#'},{'title':'Thiết bị Gas','link':'#'},{'title':'Thiết bị cảnh báo Gas'}])
+            .sProductDetail
+                .row
+                    .col-sm-6
+                        .imgSliderbig
+                            - for (var x = 1; x < 5; x++)
+                                .image:  img(src=imgPath + 'img13.png' alt="")
+                        .imageSlidersmall
+                            - for (var x = 1; x < 5; x++)
+                                f.image:  img(src=imgPath + 'img14.png' alt="")
+                    .col-sm-6
+                    

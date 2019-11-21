@@ -1,0 +1,55 @@
+extends layouts/_layout_default
+
+block setting
+    - title = "CÔNG TY CỔ PHẦN DẦU KHÍ MIỀN NAM"
+    - mainActive = "home"
+
+block content
+    .sMainBread
+        .container
+            +breadcrumb([{'title':'Tài khoản','link':'#'},{'title':'Đăng kí'}])
+    .sMainContent.sLoginPage
+        .container
+            .sLogin
+                a(href="#").btn-back 
+                    i.ic-back
+                    | Trở lại
+                .form-style.form-style-2
+                    h3 
+                        | Tạo tài khoản
+                    .row
+                        .col-8
+                            +input-box("text","","","Số điện thoại",'Nhập Số điện thoại','')
+                        .col-4.align-self-end
+                            a(href="#").v-more-3 Gửi mã xác minh
+                    +input-box("text","","","Mã xác minh",'Nhập mã xác minh','')
+                    +input-box("text","","","Email",'Nhập email','')
+                    +input-box("text","","","Mật khẩu",'Nhập mật khẩu','')
+                    +input-box("text","","","Xác nhận Mật khẩu",'Nhập lại mật khẩu','')
+                    .sNote Bằng việt đăng kí, bạn đã đồng ý với Gas24h về <a href="#">Điều khoản dịch vụ</a> & <a href="#">Chính sách bảo mật</a>
+                    .text-center
+                        a(href="#").v-more-4 Đăng nhập
+                        p Bạn đã có tài khoản? <a href="#">Đăng ký</a>
+    .sMainContent-6.bg-white
+        .container
+            .sGridValue     
+                .item
+                    .image
+                        img(src=imgPath + 'icon-1.svg' alt="")
+                    h4 Sản phẩm đa dạng
+                    p Giá cả hợp lý, luôn có các chương trình khuyến mãi thường xuyên
+                .item
+                    .image
+                        img(src=imgPath + 'icon-2.svg' alt="")
+                    h4 Sản phẩm đa dạng
+                    p Giá cả hợp lý, luôn có các chương trình khuyến mãi thường xuyên
+                .item 
+                    .image
+                        img(src=imgPath + 'icon-3.svg' alt="")
+                    h4 Sản phẩm đa dạng
+                    p Giá cả hợp lý, luôn có các chương trình khuyến mãi thường xuyên
+                .item 
+                    .image
+                        img(src=imgPath + 'icon-4.svg' alt="")
+                    h4 Sản phẩm đa dạng
+                    p Giá cả hợp lý, luôn có các chương trình khuyến mãi thường xuyên

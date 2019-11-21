@@ -1,0 +1,136 @@
+extends layouts/_layout_default
+
+block setting
+    - title = "CÔNG TY CỔ PHẦN DẦU KHÍ MIỀN NAM"
+    - mainActive = "home"
+
+block content
+    .sMainBread
+        .container
+            +breadcrumb([{'title':'Giỏ hàng','link':'#'},{'title':'Thanh toán'}])
+    .sMainContent.sCartPage
+        .container
+            .row
+                .col-sm-8
+                    .page-header-4 Xác nhận - Thanh toán
+                    .sPayment
+                        .item
+                            .title
+                                i.ic-pin
+                                |  Địa chỉ nhận hàng
+                            .info
+                                .form-style
+                                    .row
+                                        .col-4.text-right
+                                            label Họ và tên người nhận:
+                                        .col-8
+                                            +input-box("text","","","",'Nhập họ tên','')
+                                    .row
+                                        .col-4.text-right
+                                            label Số điện thoại:
+                                        .col-8
+                                            +input-box("text","","","",'Nhập số điện thoại','')
+                                    .row
+                                        .col-4.text-right
+                                            label Tỉnh / Thành phố:
+                                        .col-8
+                                            select.selectpicker.form-control(title="")
+                                                option(value="Sample") Sample
+                                                option(value="Sample") Sample
+                                                option(value="Sample") Sample
+                                                option(value="Sample") Sample
+                                                option(value="Sample") Sample
+                                    .row
+                                        .col-4.text-right
+                                            label Quận / Huyện: 
+                                        .col-8
+                                            select.selectpicker.form-control(title="")
+                                                option(value="Sample") Sample
+                                                option(value="Sample") Sample
+                                                option(value="Sample") Sample
+                                                option(value="Sample") Sample
+                                                option(value="Sample") Sample
+                                    .row
+                                        .col-4.text-right
+                                            label Phường / Xã:  
+                                        .col-8
+                                            select.selectpicker.form-control(title="")
+                                                option(value="Sample") Sample
+                                                option(value="Sample") Sample
+                                                option(value="Sample") Sample
+                                                option(value="Sample") Sample
+                                                option(value="Sample") Sample
+                                    .row
+                                        .col-4.text-right
+                                            label Địa chỉ: 
+                                        .col-8
+                                            +input-box("text","","","",'Nhập số nhà, tên đường...','')
+                                    .row
+                                        .col-4.text-right
+                                            label Ghi chú:
+                                        .col-8
+                                            +textarea-box('','Nhập ghi chú khi giao hàng','','','3')
+                                            .text-center
+                                                +a-btn-primary('Thêm địa chỉ','#','','')
+                        .item
+                            .title
+                                i.ic-car
+                                |  Phương thức vận chuyển
+                            .info
+                                .custom-control.custom-radio
+                                    input#exampleRadios1.custom-control-input(type='radio', name='customRadio' checked)
+                                    label.custom-control-label(for='exampleRadios1')
+                                        span.txt-4 Miễn phí
+                                        span.txt-bold Vận chuyển miễn phí 
+                                        span.txt-5 Gas được vẫn chuyển miễn phí, Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts 
+                        .item
+                            .title
+                                i.ic-pay
+                                |  Phương thức thanh toán 
+                            .info
+                                div
+                                    .custom-control.custom-radio
+                                        input#exampleRadios2.custom-control-input(type='radio', name='customRadio1' checked)
+                                        label.custom-control-label(for='exampleRadios2')
+                                            span.txt-bold Ship COD
+                                            span.txt-5 Thanh toán tiền mặt khi nhận hàng
+                                div
+                                    .custom-control.custom-radio
+                                        input#exampleRadios3.custom-control-input(type='radio', name='customRadio1')
+                                        label.custom-control-label(for='exampleRadios3')
+                                            span.txt-bold Thanh toán chuyển khoản
+                                            span.txt-5 Thanh toán chuyển khoản qua ngân hàng Viettelpay
+                .col-sm-4
+                    .txt-6 3 sản phẩm
+                    .sBoxCartInner
+                        .sProductCart
+                            - for (var x = 1; x < 4; x++)
+                                .item
+                                    .row
+                                        .col-3
+                                            .image
+                                                a(href="#"): img(src=imgPath + 'img12.png')
+                                        .col-9
+                                            .info
+                                                a(href="#") Thiết bị cảnh báo Gas công nghiệp vscdf cdscsd 
+                                                .txt-6
+                                                    span 1 x 700.000đ
+                        .form-style
+                            .row
+                                .col-8
+                                    +input-box("text","","","",'Mã giảm giá/ quà tặng','')
+                                .col-4
+                                    +a-btn-primary('Áp dụng','#','','')
+                        table
+                            tr
+                                td Thành tiền:
+                                td 
+                                    span.sprice 2.310.000đ
+                                    span.txt-note (3 sản phẩm)
+                            tr
+                                td Tổng tiền: 
+                                td 
+                                    span.sprice2 2.310.000đ
+                                    span.txt-note Đã bao gồm VAT
+                        
+                        a(href="#").v-more-2 Tiến hành đặt hàng

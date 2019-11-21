@@ -1,0 +1,28 @@
+extends layouts/_layout_default
+
+block setting
+    - title = "CÔNG TY CỔ PHẦN DẦU KHÍ MIỀN NAM"
+    - mainActive = "home"
+
+block content
+    .sMainBread
+        .container
+            +breadcrumb([{'title':'Tài khoản','link':'#'},{'title':'Đăng nhập'}])
+    .sMainContent.sLoginPage
+        .container
+            .sLogin
+                .row
+                    .col-sm-5.align-self-center
+                        .sShareBox
+                            h4 Đăng nhập nhanh
+                            a(href="#"): img(src=imgPath + 'btn-1.svg' alt="")
+                            a(href="#"): img(src=imgPath + 'btn-2.svg' alt="")
+                            a(href="#"): img(src=imgPath + 'btn-3.svg' alt="")
+                    .col-sm-7
+                        .form-style
+                            h3 Đăng nhập
+                            +input-box("text","","","Tên đăng nhập",'Nhập Email / Số điện thoại','')
+                            +input-box("text","","","Mật khẩu",'Nhập mật khẩu','')
+                            p Bạn đã có tài khoản? <a href="#">Đăng ký</a>
+                            .text-center
+                                a(href="#").v-more-4 Đăng nhập

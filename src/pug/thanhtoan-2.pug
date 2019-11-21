@@ -1,0 +1,100 @@
+extends layouts/_layout_default
+
+block setting
+    - title = "CÔNG TY CỔ PHẦN DẦU KHÍ MIỀN NAM"
+    - mainActive = "home"
+
+block content
+    .sMainBread
+        .container
+            +breadcrumb([{'title':'Giỏ hàng','link':'#'},{'title':'Thanh toán'}])
+    .sMainContent.sCartPage
+        .container
+            .row
+                .col-sm-8
+                    .page-header-4 Xác nhận - Thanh toán
+                    .sPayment
+                        .item
+                            .title
+                                i.ic-pin
+                                |  Địa chỉ nhận hàng
+                                a(href="#").v-more-4 
+                                    i.ic-user
+                                    | Đổi người nhận
+                            .info
+                                .row
+                                    .col-9
+                                        .sInfo
+                                            p Ông Nguyễn Văn 
+                                            p Số điện thoại : 0945346835 
+                                            p Địa chỉ: 145 Hai Bà Trưng, Quận 1, Hồ Chí Minh
+                                    .col-3.text-right
+                                        a(href="#").v-more-4 
+                                            i.ic-edit
+                                            | Chỉnh sửa
+                        .item
+                            .title
+                                i.ic-car
+                                |  Phương thức vận chuyển
+                            .info
+                                .custom-control.custom-radio
+                                    input#exampleRadios1.custom-control-input(type='radio', name='customRadio' checked)
+                                    label.custom-control-label(for='exampleRadios1')
+                                        span.txt-4 Miễn phí
+                                        span.txt-bold Vận chuyển miễn phí 
+                                        span.txt-5 Gas được vẫn chuyển miễn phí, Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts 
+                        .item
+                            .title
+                                i.ic-pay
+                                |  Phương thức thanh toán 
+                            .info
+                                div
+                                    .custom-control.custom-radio
+                                        input#exampleRadios2.custom-control-input(type='radio', name='customRadio1' checked)
+                                        label.custom-control-label(for='exampleRadios2')
+                                            span.txt-bold Ship COD
+                                            span.txt-5 Thanh toán tiền mặt khi nhận hàng
+                                div
+                                    .custom-control.custom-radio
+                                        input#exampleRadios3.custom-control-input(type='radio', name='customRadio1')
+                                        label.custom-control-label(for='exampleRadios3')
+                                            span.txt-bold Thanh toán chuyển khoản
+                                            span.txt-5 Thanh toán chuyển khoản qua ngân hàng Viettelpay
+                .col-sm-4
+                    .txt-6 3 sản phẩm
+                    .sBoxCartInner
+                        .sProductCart
+                            - for (var x = 1; x < 4; x++)
+                                .item
+                                    .row
+                                        .col-3
+                                            .image
+                                                a(href="#"): img(src=imgPath + 'img12.png')
+                                        .col-9
+                                            .info
+                                                a(href="#") Thiết bị cảnh báo Gas công nghiệp vscdf cdscsd 
+                                                .txt-6
+                                                    span 1 x 700.000đ
+                            
+                        .form-style-2
+                            .row
+                                .col-8
+                                    span.txt-7 Mã giảm giá/ Quà tặng:
+                                .col-4.text-right
+                                    a(href="#").v-more-4 
+                                        | Thay đổi
+                        h4 NEWGAS24h
+                        span.txt-7 Giảm giá 20% cho đơn từ 99k lần đầu đặt hàng tại Gas24h
+                        table
+                            tr
+                                td Thành tiền:
+                                td 
+                                    span.sprice 2.310.000đ
+                                    span.txt-note (3 sản phẩm)
+                            tr
+                                td Tổng tiền: 
+                                td 
+                                    span.sprice2 2.310.000đ
+                                    span.txt-note Đã bao gồm VAT
+                        
+                        a(href="#").v-more-2 Tiến hành đặt hàng

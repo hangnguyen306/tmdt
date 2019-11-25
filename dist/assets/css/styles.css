@@ -14222,6 +14222,10 @@ body {
 a:focus {
   outline: none; }
 
+@media (max-width: 991.98px) {
+  .wrapper {
+    padding-top: 58px; } }
+
 .sBanner .image img {
   max-width: 100%;
   width: 100%; }
@@ -14243,6 +14247,8 @@ a:focus {
         text-align: center;
         position: relative;
         z-index: 2; }
+        .sMainContent .sStep ul li img {
+          max-width: 100%; }
         .sMainContent .sStep ul li:before {
           content: '';
           border-radius: 50%;
@@ -14265,11 +14271,26 @@ a:focus {
           height: 2px;
           width: 100%;
           z-index: 2; }
+        .sMainContent .sStep ul li .icon-img {
+          height: 90px;
+          display: flex;
+          align-items: center;
+          justify-content: center; }
+          @media (max-width: 991.98px) {
+            .sMainContent .sStep ul li .icon-img {
+              max-width: 60px;
+              height: 60px;
+              margin: 0 auto; } }
         .sMainContent .sStep ul li span {
           display: block;
           font-size: 1rem;
           font-weight: 500;
           margin-top: 0.625rem; }
+          @media (max-width: 991.98px) {
+            .sMainContent .sStep ul li span {
+              font-size: 0.75rem; }
+              .sMainContent .sStep ul li span br {
+                display: none; } }
         .sMainContent .sStep ul li:last-child:after {
           display: none; }
 
@@ -14281,20 +14302,27 @@ a:focus {
       padding: 0 1.25rem; }
       .sBoxSliderInner .item img {
         max-width: 100%; }
+  @media (max-width: 991.98px) {
+    .sBoxSliderInner {
+      margin: 0 -0.625rem; }
+      .sBoxSliderInner .item {
+        padding: 0 0.625rem; } }
 
 span.icon-1 {
   background: url("../images/icon01.png") no-repeat bottom center;
   width: 2.25rem;
   height: 2.25rem;
   margin-right: 10px;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-size: contain; }
 
 span.icon-2 {
   background: url("../images/icon02.png") no-repeat bottom center;
   width: 4.375rem;
   height: 2.25rem;
   margin-right: 10px;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-size: contain; }
 
 span.icon-3 {
   background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.1523 7.1202V3.51562C22.1232 3.51562 22.9101 2.72854 22.9101 1.75781C22.9101 0.786973 22.1232 0 21.1523 0H8.8477C7.87686 0 7.08989 0.786973 7.08989 1.75781C7.08989 2.72854 7.87686 3.51562 8.8477 3.51562V7.1202C7.12938 7.47041 5.77991 8.8292 5.42841 10.5469H24.5716C24.2201 8.8292 22.8706 7.47041 21.1523 7.1202ZM12.3633 7.03125H10.6055V3.51562H12.3633V7.03125ZM15.879 7.03125H14.1211V3.51562H15.879V7.03125ZM19.3946 7.03125H17.6368V3.51562H19.3946V7.03125Z' fill='%23FAF2F3'/%3E%3Crect x='10.8' y='13.8' width='8.4' height='8.4' fill='%23D82438'/%3E%3Cpath d='M5.33203 12.3633V22.9102H24.668V12.3633H5.33203ZM15 21.1523C13.5461 21.1523 12.3633 19.9696 12.3633 18.5156C12.3633 17.3921 13.7014 15.3339 14.2764 14.5005C14.606 14.025 15.3939 14.025 15.7235 14.5005C16.2986 15.3339 17.6367 17.3921 17.6367 18.5156C17.6367 19.9696 16.4539 21.1523 15 21.1523Z' fill='%23FD9C2C'/%3E%3Cpath d='M5.43616 24.7266C5.65202 25.772 6.23086 26.7171 7.08979 27.3633V28.2422C7.08979 29.2112 7.87858 30 8.8476 30H21.1523C22.1213 30 22.9101 29.2112 22.9101 28.2422V27.3633C23.769 26.7171 24.348 25.772 24.5639 24.7266H5.43616Z' fill='%23FAF2F3'/%3E%3Cpath d='M15 16.6291C14.4936 17.4822 14.1279 18.2479 14.1211 18.5165C14.1211 19.0006 14.5151 19.3945 15 19.3945C15.4841 19.3945 15.8789 19.0006 15.8789 18.5156C15.8712 18.2461 15.5055 17.4805 15 16.6291Z' fill='%23FFDD00'/%3E%3C/svg%3E%0A");
@@ -14344,6 +14372,10 @@ span.icon-5 {
     .page-header-2 h3 span {
       display: inline-block;
       vertical-align: middle; }
+  .page-header-2 .v-more {
+    color: white; }
+    .page-header-2 .v-more:after {
+      background-image: url("data:image/svg+xml,%3Csvg width='18' height='16' viewBox='0 0 18 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.91315 3.5L8.69736 7.94L3.91315 12.5' stroke='%23FAF2F3' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M10.5579 3.5L15.3421 7.94L10.5579 12.5' stroke='%23FAF2F3' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A"); }
   .page-header-2.page-header-2-gray {
     background: #F4F4F7;
     border-radius: 2px;
@@ -14403,6 +14435,14 @@ span.icon-5 {
     max-width: 20%;
     flex: 0 0 20%;
     padding: 10px; }
+    @media (max-width: 991.98px) {
+      .sBoxProduct .item {
+        max-width: 33.333% !important;
+        flex: 0 0 33.333% !important; } }
+    @media (max-width: 991.98px) {
+      .sBoxProduct .item {
+        max-width: 50% !important;
+        flex: 0 0 50% !important; } }
     .sBoxProduct .item.itemStart {
       display: flex;
       max-width: 40%;
@@ -14421,6 +14461,10 @@ span.icon-5 {
             font-size: 1.125rem; }
           .sBoxProduct .item.itemStart .info .price span.txt-new {
             font-weight: bold; }
+      @media (max-width: 991.98px) {
+        .sBoxProduct .item.itemStart {
+          max-width: 100% !important;
+          flex: 0 0 100% !important; } }
     .sBoxProduct .item .image {
       position: relative; }
       .sBoxProduct .item .image .btn-group-btn {
@@ -14495,7 +14539,12 @@ span.icon-5 {
     .sBoxProduct .icon-discount.icon-yellow {
       background-image: url("data:image/svg+xml,%3Csvg width='50' height='65' viewBox='0 0 50 65' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 65V0H50V65L25.4902 55.3191L0 65Z' fill='%23FD9C2C'/%3E%3C/svg%3E%0A"); }
   .sBoxProduct.sProducList {
-    margin: 30px -40px 0px -40px; }
+    margin: 30px -40px 0px -40px;
+    flex-wrap: wrap; }
+    @media (max-width: 991.98px) {
+      .sBoxProduct.sProducList {
+        margin-left: -10px;
+        margin-right: -10px; } }
     .sBoxProduct.sProducList .item {
       padding: 0 40px;
       max-width: 25%;
@@ -14507,13 +14556,20 @@ span.icon-5 {
           height: 224px;
           display: flex;
           align-items: center;
-          padding: 7px; }
+          padding: 7px;
+          justify-content: center; }
           .sBoxProduct.sProducList .item .itemWrap .image img {
             max-height: 200px; }
         .sBoxProduct.sProducList .item .itemWrap .info .price {
           justify-content: flex-start; }
           .sBoxProduct.sProducList .item .itemWrap .info .price span {
             padding-left: 0; }
+      @media (max-width: 991.98px) {
+        .sBoxProduct.sProducList .item {
+          padding: 0 10px;
+          max-width: 50%;
+          flex: 0 0 50%;
+          margin-bottom: 20px; } }
   .sBoxProduct.sProducList-2 {
     margin: 30px -10px; }
     .sBoxProduct.sProducList-2 .item {
@@ -14568,29 +14624,39 @@ span.icon-5 {
   padding: 3.125rem 0;
   background: #FAFAFA; }
 
-.sNewGrid .item {
-  padding: 0 40px;
-  flex: 0 0 33.333%;
-  max-width: 33.333%; }
-  .sNewGrid .item .image img {
-    max-width: 100%; }
-  .sNewGrid .item .info > a {
-    font-weight: bold;
-    font-size: 10px;
-    line-height: 170%;
-    color: #FD9C2C; }
-  .sNewGrid .item .info h4 {
-    font-weight: normal;
-    font-size: 1.125rem;
-    line-height: 170%;
-    color: #373435; }
-    .sNewGrid .item .info h4 a {
-      color: inherit; }
-  .sNewGrid .item .info p {
-    font-weight: normal;
-    font-size: 0.875rem;
-    line-height: 170%;
-    margin: 0; }
+.sNewGrid {
+  flex-wrap: wrap; }
+  .sNewGrid .item {
+    padding: 0 40px;
+    flex: 0 0 33.333%;
+    max-width: 33.333%; }
+    @media (max-width: 991.98px) {
+      .sNewGrid .item {
+        padding: 0 10px; } }
+    @media (max-width: 767.98px) {
+      .sNewGrid .item {
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin-bottom: 10px; } }
+    .sNewGrid .item .image img {
+      max-width: 100%; }
+    .sNewGrid .item .info > a {
+      font-weight: bold;
+      font-size: 10px;
+      line-height: 170%;
+      color: #FD9C2C; }
+    .sNewGrid .item .info h4 {
+      font-weight: normal;
+      font-size: 1.125rem;
+      line-height: 170%;
+      color: #373435; }
+      .sNewGrid .item .info h4 a {
+        color: inherit; }
+    .sNewGrid .item .info p {
+      font-weight: normal;
+      font-size: 0.875rem;
+      line-height: 170%;
+      margin: 0; }
 
 .sGridValue {
   display: flex;
@@ -14600,6 +14666,10 @@ span.icon-5 {
     max-width: 25%;
     text-align: center;
     padding: 0 1.5625rem; }
+    @media (max-width: 991.98px) {
+      .sGridValue .item {
+        flex: 0 0 50%;
+        max-width: 50%; } }
     .sGridValue .item .image {
       height: 80px;
       display: flex;

@@ -9,7 +9,11 @@ body {
 a:focus {
     outline: none;
 }
-
+@include media-breakpoint-down(md) { 
+    .wrapper{
+        padding-top: 58px;
+    }
+}
 .sBanner {
     .image {
         img {
@@ -38,7 +42,9 @@ a:focus {
                 text-align: center;
                 position: relative;
                 z-index: 2;
-
+                img{
+                    max-width: 100%;
+                }
                 &:before {
                     content: '';
                     border-radius: 50%;
@@ -64,12 +70,28 @@ a:focus {
                     width: 100%;
                     z-index: 2;
                 }
-
+                .icon-img{
+                    height: 90px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    @include media-breakpoint-down(md) {
+                        max-width: 60px;
+                        height: 60px;
+                        margin: 0 auto;
+                    }
+                }
                 span {
                     display: block;
                     font-size: rem(16);
                     font-weight: 500;
-                    margin-top: rem(10)
+                    margin-top: rem(10);
+                    @include media-breakpoint-down(md) {
+                        font-size: rem(12);
+                        br{
+                            display: none;
+                        }
+                    }
                 }
 
                 &:last-child {
@@ -96,6 +118,14 @@ a:focus {
             }
         }
     }
+    @include media-breakpoint-down(md) { 
+        &Inner {
+            margin: 0 rem(-10);
+            .item {
+                padding: 0 rem(10);
+            }
+        } 
+    }
 }
 
 span.icon-1 {
@@ -104,6 +134,7 @@ span.icon-1 {
     height: rem(36);
     margin-right: 10px;
     background-repeat: no-repeat;
+    background-size: contain;
 }
 
 span.icon-2 {
@@ -112,6 +143,7 @@ span.icon-2 {
     height: rem(36);
     margin-right: 10px;
     background-repeat: no-repeat;
+    background-size: contain;
 }
 
 span.icon-3 {
@@ -168,6 +200,12 @@ background-image: url("data:image/svg+xml,%3Csvg width='56' height='56' viewBox=
             span {
                 display: inline-block;
                 vertical-align: middle;
+            }
+        }
+        .v-more{
+            color: white;
+            &:after{
+                background-image: url("data:image/svg+xml,%3Csvg width='18' height='16' viewBox='0 0 18 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.91315 3.5L8.69736 7.94L3.91315 12.5' stroke='%23FAF2F3' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M10.5579 3.5L15.3421 7.94L10.5579 12.5' stroke='%23FAF2F3' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A");
             }
         }
         &.page-header-2-gray{
@@ -245,7 +283,14 @@ background-image: url("data:image/svg+xml,%3Csvg width='56' height='56' viewBox=
         max-width: 20%;
         flex: 0 0 20%;
         padding: 10px;
-
+        @include media-breakpoint-down(md) { 
+            max-width: 33.333%!important;
+            flex: 0 0 33.333%!important;
+        }
+        @include media-breakpoint-down(md) {
+            max-width: 50%!important;
+            flex: 0 0 50%!important;
+        }
         &.itemStart {
             display: flex;
             max-width: 40%;
@@ -277,6 +322,10 @@ background-image: url("data:image/svg+xml,%3Csvg width='56' height='56' viewBox=
                         }
                     }
                 }
+            }
+            @include media-breakpoint-down(md) { 
+                max-width: 100%!important;
+                flex: 0 0 100%!important;
             }
         }
 
@@ -388,7 +437,11 @@ background-image: url("data:image/svg+xml,%3Csvg width='56' height='56' viewBox=
 
     &.sProducList {
         margin: 30px -40px 0px -40px;
-
+        flex-wrap: wrap;
+        @include media-breakpoint-down(md) { 
+            margin-left: -10px;
+            margin-right: -10px;
+        }
         .item {
             padding: 0 40px;
             max-width: 25%;
@@ -403,6 +456,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='56' height='56' viewBox=
                     display: flex;
                     align-items: center;
                     padding: 7px;
+                    justify-content: center;
 
                     img {
                         max-height: 200px;
@@ -416,6 +470,12 @@ background-image: url("data:image/svg+xml,%3Csvg width='56' height='56' viewBox=
                         padding-left: 0;
                     }
                 }
+            }
+            @include media-breakpoint-down(md) { 
+                padding: 0 10px;
+                max-width: 50%;
+                flex: 0 0 50%;
+                margin-bottom: 20px;
             }
         }
     }
@@ -505,11 +565,17 @@ background-image: url("data:image/svg+xml,%3Csvg width='56' height='56' viewBox=
 }
 
 .sNewGrid {
+    flex-wrap: wrap;
     .item {
         padding: 0 40px;
         flex: 0 0 33.333%;
         max-width: 33.333%;
+        @include media-breakpoint-down(md) { 
+        padding: 0 10px;
 
+        }
+        @include media-breakpoint-down(sm) {  flex: 0 0 50%;
+            max-width: 50%; margin-bottom: 10px;}
         .image {
             img {
                 max-width: 100%;
@@ -552,6 +618,10 @@ background-image: url("data:image/svg+xml,%3Csvg width='56' height='56' viewBox=
         max-width: 25%;
         text-align: center;
         padding: 0 rem(25);
+        @include media-breakpoint-down(md) { 
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
         .image{
                 height: 80px;
                 display: flex;

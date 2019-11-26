@@ -284,12 +284,12 @@ background-image: url("data:image/svg+xml,%3Csvg width='56' height='56' viewBox=
         flex: 0 0 20%;
         padding: 10px;
         @include media-breakpoint-down(md) { 
-            max-width: 33.333%!important;
-            flex: 0 0 33.333%!important;
+            max-width: 33.333%;
+            flex: 0 0 33.333%;
         }
         @include media-breakpoint-down(md) {
-            max-width: 50%!important;
-            flex: 0 0 50%!important;
+            max-width: 50%;
+            flex: 0 0 50%;
         }
         &.itemStart {
             display: flex;
@@ -347,6 +347,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='56' height='56' viewBox=
 
         img {
             max-width: 100%;
+            width: 100%;
         }
 
         .info {
@@ -438,7 +439,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='56' height='56' viewBox=
     &.sProducList {
         margin: 30px -40px 0px -40px;
         flex-wrap: wrap;
-        @include media-breakpoint-down(md) { 
+        @include media-breakpoint-down(lg) { 
             margin-left: -10px;
             margin-right: -10px;
         }
@@ -470,6 +471,9 @@ background-image: url("data:image/svg+xml,%3Csvg width='56' height='56' viewBox=
                         padding-left: 0;
                     }
                 }
+            }
+            @include media-breakpoint-down(lg) { 
+                padding: 0 10px;
             }
             @include media-breakpoint-down(md) { 
                 padding: 0 10px;
@@ -515,6 +519,14 @@ background-image: url("data:image/svg+xml,%3Csvg width='56' height='56' viewBox=
                         }
                     }
                 }
+            }
+            @include media-breakpoint-down(lg) { 
+                flex: 0 0 33.333%;
+                max-width: 33.333%;
+            }
+            @include media-breakpoint-down(md) { 
+                flex: 0 0 50%;
+                max-width: 50%;
             }
         }
     }

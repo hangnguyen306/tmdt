@@ -55,23 +55,24 @@
   position: relative;
   display: inline-block;
   vertical-align: middle;
+  padding-right: rem(20);
 
   .custom-control-label::after {
     position: absolute;
     top: 0.25rem;
     left: 0;
     display: block;
-    width: 7px;
-    height: 7px;
+    width: rem(7);
+    height: rem(7);
     content: "";
     border-radius: 50%;
-    top: 6px;
-    left: 4px;
+    top: rem(6);
+    left: rem(4);
   }
 
   .custom-control-label::before {
     position: absolute;
-    top: 2px;
+    top: rem(2);
     left: 0;
     display: block;
     width: 0.9375rem;
@@ -103,7 +104,6 @@
       color: #222222;
       padding-left: rem(10);
       font-weight: normal;
-      ;
       padding-top: rem(4);
     }
   }
@@ -179,6 +179,16 @@ ul.menuList {
   li {
     margin: 0 0 10px 0;
 
+    &.active {
+      >a {
+        color: #BD192B;
+      }
+
+      ul {
+        display: block;
+      }
+    }
+
     >a {
       font-style: normal;
       font-weight: bold;
@@ -190,6 +200,13 @@ ul.menuList {
       &:hover {
         color: #BD192B;
       }
+    }
+
+    ul {
+      padding: 10px 0 0 15px;
+      margin: 0;
+      list-style: none;
+      display: none;
     }
   }
 }
@@ -382,27 +399,7 @@ ul.menuList {
     }
   }
 
-  .input-group {
-    max-width: 150px;
-    border: 1px solid #E3E3E6;
-    margin-top: 10px;
 
-    input {
-      height: 36px;
-      text-align: center;
-      border-top: none;
-      border-bottom: none;
-    }
-
-    .btn-number {
-      background: none;
-      border: none;
-      outline: none;
-      padding-left: 10px;
-      padding-right: 10px;
-      cursor: pointer;
-    }
-  }
 }
 
 .btnBack {
@@ -579,6 +576,30 @@ ul.menuList {
   background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.7865 14.177H1.21751C0.93224 14.177 0.708984 14.4127 0.708984 14.6855C0.708984 14.9584 0.944643 15.1941 1.21751 15.1941H14.7989C15.0842 15.1941 15.3074 14.9584 15.3074 14.6855C15.3074 14.4127 15.0718 14.177 14.7865 14.177Z' fill='%23FD9C2C'/%3E%3Cpath d='M0.707716 9.67456L0.695312 12.0932C0.695312 12.2296 0.744925 12.366 0.84415 12.4653C0.943375 12.5645 1.06741 12.6141 1.20384 12.6141L3.61004 12.6017C3.74648 12.6017 3.87051 12.5521 3.96973 12.4529L12.2798 4.14278C12.4783 3.94433 12.4783 3.62185 12.2798 3.411L9.89841 1.00479C9.69996 0.806345 9.37748 0.806345 9.16663 1.00479L7.50462 2.67921L0.856553 9.31487C0.769731 9.4141 0.707716 9.53813 0.707716 9.67456ZM9.53872 2.09627L11.2131 3.77069L10.2705 4.71332L8.59609 3.0389L9.53872 2.09627ZM1.73717 9.89782L7.86431 3.77069L9.53872 5.4451L3.41159 11.5598L1.72477 11.5722L1.73717 9.89782Z' fill='%23FD9C2C'/%3E%3C/svg%3E%0A");
 }
 
+.sBoxCart {
+  .input-group {
+    max-width: 150px;
+    border: 1px solid #E3E3E6;
+    margin-top: 10px;
+
+    input {
+      height: 36px;
+      text-align: center;
+      border-top: none;
+      border-bottom: none;
+    }
+
+    .btn-number {
+      background: none;
+      border: none;
+      outline: none;
+      padding-left: 10px;
+      padding-right: 10px;
+      cursor: pointer;
+    }
+  }
+}
+
 .sCartPage {
   .sBoxCartInner {
     background: white;
@@ -598,6 +619,203 @@ ul.menuList {
 
     .form-style-2 {
       font-size: rem(12);
+    }
+  }
+}
+
+.sProductDetail {
+  margin-top: rem(30);
+
+  .sSliderImg {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .imageSlidersmall {
+    margin-top: rem(20);
+
+    .image {
+      border-radius: 5px;
+    }
+  }
+
+  .info {
+    h3 {
+      font-size: rem(24);
+      font-weight: bold;
+    }
+
+    .txt-5 {
+      color: #606062;
+    }
+
+    .txt-6 {
+      font-size: rem(24);
+      font-weight: bold;
+      color: #BD192B;
+    }
+
+    .txt-1 {
+      font-size: 0.8125rem;
+      color: #606062;
+
+      b {
+        color: #D82438;
+        display: inline-block;
+        padding-left: 0.625rem;
+      }
+    }
+
+    .txt-2 {
+      font-size: 0.8125rem;
+      color: #606062;
+      text-decoration-line: line-through;
+      display: inline-block;
+      padding-left: 1.875rem;
+    }
+
+  }
+
+  .info-2 {
+    border-top: 1px solid #E3E3E6;
+    font-size: rem(14);
+    padding-top: rem(30);
+    margin-top: rem(30);
+
+    h4 {
+      font-weight: 600;
+      font-size: rem(14);
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        font-weight: 600;
+        font-size: rem(14);
+        line-height: 150%;
+        position: relative;
+        padding-left: 15px;
+        margin-bottom: 8px;
+
+        &:before {
+          position: absolute;
+          width: 6px;
+          height: 6px;
+          background: #FD9C2C;
+          content: '';
+          border-radius: 50%;
+          top: 6px;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  .sBoxCart {
+    max-width: 200px;
+  }
+
+  .btnGrp {
+    margin: 20px 0;
+
+    a {
+      max-width: 100%;
+      width: 100%;
+
+      &.v-more-5 {
+        &::before {
+          width: 16px;
+          height: 14px;
+          margin-right: 10px;
+          content: '';
+          display: inline-block;
+          vertical-align: middle;
+          background-image: url("data:image/svg+xml,%3Csvg width='16' height='15' viewBox='0 0 16 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.6686 10.1104C11.5685 10.1104 10.6736 10.9089 10.6736 11.8904C10.6736 12.8718 11.5686 13.6704 12.6686 13.6704C13.7686 13.6704 14.6636 12.8718 14.6636 11.8904C14.6636 10.9089 13.7686 10.1104 12.6686 10.1104ZM12.6686 12.6024C12.2285 12.6024 11.8706 12.283 11.8706 11.8904C11.8706 11.4977 12.2285 11.1784 12.6686 11.1784C13.1087 11.1784 13.4666 11.4977 13.4666 11.8904C13.4666 12.283 13.1087 12.6024 12.6686 12.6024Z' fill='%23D82438'/%3E%3Cpath d='M5.42665 10.1104C4.32658 10.1104 3.43164 10.9089 3.43164 11.8904C3.43164 12.8718 4.32661 13.6704 5.42665 13.6704C6.52669 13.6704 7.42166 12.8718 7.42166 11.8904C7.42166 10.9089 6.52669 10.1104 5.42665 10.1104ZM5.42665 12.6024C4.98656 12.6024 4.62865 12.283 4.62865 11.8904C4.62865 11.4977 4.98656 11.1784 5.42665 11.1784C5.86675 11.1784 6.22466 11.4977 6.22466 11.8904C6.22466 12.283 5.86675 12.6024 5.42665 12.6024Z' fill='%23D82438'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.45 1.78442C9.09102 1.78442 8.8 2.07544 8.8 2.43442V3.47965H7.53534C7.23968 3.47965 7 3.71933 7 4.01499C7 4.31065 7.23968 4.55033 7.53534 4.55033H8.8V5.59556C8.8 5.95455 9.09102 6.24556 9.45 6.24556C9.80899 6.24556 10.1 5.95454 10.1 5.59556V4.55033H11.4647C11.7603 4.55033 12 4.31065 12 4.01499C12 3.71933 11.7603 3.47965 11.4647 3.47965H10.1V2.43442C10.1 2.07544 9.80899 1.78442 9.45 1.78442Z' fill='%23D82438'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15.4016 3.02602C15.5857 3.02602 15.7595 3.1015 15.8728 3.2309C15.9861 3.3603 16.0266 3.52888 15.9826 3.68833L14.5262 8.93937C14.4601 9.17754 14.2204 9.34486 13.9452 9.34486H4.62846C4.35156 9.34486 4.11074 9.17542 4.04631 8.93494L2.10117 1.6732H0.598504C0.267939 1.6732 0 1.43414 0 1.1392C0 0.844259 0.267939 0.605197 0.598504 0.605225H2.57358C2.85049 0.605225 3.0913 0.77486 3.15574 1.01515L3.6944 3.02602H6V4.09402H3.98046L5.10087 8.27689H13.477L14.6369 4.09402H13V3.02602H15.4016Z' fill='%23D82438'/%3E%3C/svg%3E%0A");
+        }
+      }
+    }
+  }
+}
+.sProductDetailContent{
+  padding-top:rem(30);
+  .sNavLink {
+    list-style: none;
+    flex-direction: row;
+    li {
+      a {
+        color: #808084;
+        font-size: rem(16);
+        display: block;
+        padding: 15px 24px;
+        &.active{
+          background: #F4F4F7;
+          color:#000;
+        }
+      }
+    }
+  }
+  .tab-content{
+    background: #F4F4F7;
+    padding:rem(20);
+    .v-more-3{
+      max-width: 200px;
+      margin: 0 auto;
+    }
+  }
+}
+.sProductDetailContent-2{
+  .tab-content{background: rgba(#FFD7A9, 0.3);
+    padding-top:rem(20);
+     > .tab-pane{
+       display: block!important;
+       height: 0;
+       overflow: hidden;
+       &.active{
+         height: auto;
+         overflow: visible;
+       }
+     }
+  }
+}
+.sSliderRelate{
+  margin-left: -10px;
+  margin-right: -10px;
+  .item {
+    padding: 0 10px;
+  }
+ 
+}
+.sNavLink-2{
+  list-style: none;
+  flex-direction: row;
+  text-transform: uppercase;
+  li {
+    margin: 0 20px;
+    a {
+      color: #808084;
+      font-size: rem(16);
+      display: block;
+      padding: 15px 0px;
+      position: relative;
+      &:after{
+        content:'';
+        position: absolute;
+        bottom: 0;
+        left:0;
+        right: 0;
+        height:2px;
+        background: #FD9C2C;
+        opacity: 0;
+      }
+      &.active{
+        color:#000;
+        &:after{
+          opacity: 1;
+        }
+      }
     }
   }
 }

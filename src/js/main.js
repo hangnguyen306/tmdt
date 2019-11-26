@@ -80,6 +80,44 @@ function sBoxSlider(){
         slidesToScroll: 2,
     });
 }
+function sSliderRelate(){
+    var el = $('.sSliderRelate');
+    el.slick({
+        infinite: true,
+        slidesToShow: 5,
+        dots: false,
+        infinite: false,
+        arrows: false,
+        speed: 300,
+        slidesToScroll: 1,
+        responsive: [
+            {
+              breakpoint: 992,
+              settings: {
+                slidesToShow: 4,
+                slidesToScroll: 3
+              }
+            },
+            {
+              breakpoint: 800,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 2
+              }
+            },
+            {
+                breakpoint: 640,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 2
+                }
+              }
+         
+          ]
+    });
+}
+
+
 function sSliderNewsInner(){
     var el = $('.sSliderNewsInner');
     el.slick({
@@ -102,6 +140,24 @@ function sSliderNewsInner2(){
         variableWidth: true
     });
 }
+
+
+function sProductDetail(){
+    $('.imgSliderbig').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.imageSlidersmall'
+      });
+      $('.imageSlidersmall').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        asNavFor: '.imgSliderbig',
+        focusOnSelect: true
+      });
+                  
+}
 function init(){
     // Base
     ui();
@@ -111,6 +167,8 @@ function init(){
     sBoxSlider();
     sSliderNewsInner();
     sSliderNewsInner2();
+    sProductDetail();
+    sSliderRelate();
     $(window).on("debouncedresize", function( event ) {
         // ...
     });

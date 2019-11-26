@@ -8,14 +8,128 @@ block content
     .sMainBread
         .container
             +breadcrumb([{'title':'Sản phẩm','link':'#'},{'title':'Thiết bị Gas','link':'#'},{'title':'Thiết bị cảnh báo Gas'}])
-            .sProductDetail
-                .row
-                    .col-sm-6
+    .sProductDetail
+        .container
+            .row
+                .col-sm-5
+                    .sSliderImg
                         .imgSliderbig
                             - for (var x = 1; x < 5; x++)
                                 .image:  img(src=imgPath + 'img13.png' alt="")
                         .imageSlidersmall
                             - for (var x = 1; x < 5; x++)
-                                f.image:  img(src=imgPath + 'img14.png' alt="")
-                    .col-sm-6
-                    
+                                .image:  img(src=imgPath + 'img14.png' alt="")
+                .col-sm-7
+                    .info
+                        h3 Thiết bị cảnh báo Gas
+                        .txt-5 Mã sản phẩm: A324DDDS
+                        .txt-6 435.000đ
+                        div
+                            span.txt-1 Tiết kiệm: <b>30%</b>
+                            span.txt-2 550.000đ
+                        .sBoxCart
+                            span.txt-1 Số lượng: 
+                            .input-group
+                                .input-group-prepend
+                                    button#minus-btn.btn-number
+                                        i.fa.fa-minus
+                                input#qty_input.form-control.form-control-sm(type='text', value='1', min='1')
+                                .input-group-prepend
+                                    button#plus-btn.btn-number
+                                        i.fa.fa-plus
+                        .btnGrp
+                            .row
+                                .col-6
+                                    a(href="#").v-more-5 Thêm vào giỏ hàng
+                                .col-6
+                                    a(href="#").v-more-4 Mua ngay
+                    .info-2
+                        h4 Phương thức thanh toán
+                        .row
+                            .col-sm-6
+                                ul
+                                    li Ship COD: Thanh toán tiền mặt khi nhận hàng 
+                                    li Ví MoMo: Nhập mã MoMoGas24 hoàn tiền 5%
+                                    li Chuyển khoản : Chuyển khoản qua ngân hàng Viettelpay 
+                            .col-sm-6
+                                ul
+                                    li Chính sách 1
+                                    li Chính sách 2
+                                    li Chính sách 3
+    .sProductDetailContent
+        .container
+            .row
+                .col-sm-9
+                    ul#myList.list-group.list-group-tab.sNavLink(role='tablist')
+                        li: a.active(data-toggle='list', href='#navTab1', role='tab') 
+                            span THÔNG TIN SẢN PHẨM
+                        li: a(data-toggle='list', href='#navTab2', role='tab') 
+                            span ĐÁNH GIÁ SẢN PHẨM
+                    .tab-content
+                        #navTab1.tab-pane.active(role='tabpanel')
+                            .sContent
+                                p: strong Đặc tính sản phẩm 
+                                p - Thiết bị cảm ứng báo xì gas độc lập, còi báo tại chỗ<br>- Ứng dụng cho khi có khí gas thoát ra ngoài, cảnh báo cho người sử dụng biết để đề phòng cháy nổ.<br>- Giúp chị em an tâm hơn và đảm bảo hạn chế cháy nổ xì gas trong gia đình
+                                p: strong Đặc tính an toàn
+                                p - Thiết bị cảm ứng báo xì gas độc lập, còi báo tại chỗ<br>- Ứng dụng cho khi có khí gas thoát ra ngoài, cảnh báo cho người sử dụng biết để đề phòng cháy nổ.
+                                p: strong Thông số kĩ thuật 
+                                p - Thiết bị cảm ứng báo xì gas độc lập, còi báo tại chỗ<br>- Ứng dụng cho khi có khí gas thoát ra ngoài, cảnh báo cho người sử dụng biết để đề phòng cháy nổ.
+                                p: strong Thông số kĩ thuật 
+                                p - Thiết bị cảm ứng báo xì gas độc lập, còi báo tại chỗ<br>- Ứng dụng cho khi có khí gas thoát ra ngoài, cảnh báo cho người sử dụng biết để đề phòng cháy nổ.
+                                p: strong Thông số kĩ thuật 
+                                p - Thiết bị cảm ứng báo xì gas độc lập, còi báo tại chỗ<br>- Ứng dụng cho khi có khí gas thoát ra ngoài, cảnh báo cho người sử dụng biết để đề phòng cháy nổ.
+                                p: strong Thông số kĩ thuật 
+                                p - Thiết bị cảm ứng báo xì gas độc lập, còi báo tại chỗ<br>- Ứng dụng cho khi có khí gas thoát ra ngoài, cảnh báo cho người sử dụng biết để đề phòng cháy nổ.
+                            .text-center
+                                a(href="#").v-more-3 Xem thêm
+                        #navTab2.tab-pane(role='tabpanel')
+                            .sContent
+                                p: strongu updating
+                        #navTab2.tab-pane(role='tabpanel')
+                .col-sm-3
+                    .sNewGrid-2
+                        .row
+                            - for (var x = 1; x < 3; x++)
+                                .col-lg-12.col-6
+                                    .item   
+                                        .itemWrap      
+                                            .image
+                                                a(href="#"): img(src=imgPath + 'img08.png' alt="")
+                                            .info
+                                                h4: a(href="#") Ra mắt ứng dụng Gas24h – Đặt gas chỉ qua một chạm    
+                                                .date 12/9/2019 - 15/9/2019
+                                                p Nhanh chóng, tiện lợi, trả tiền trực tiếp khi nhận gas, còn được tích lũy tiền cho lần mua sau
+    .sProductDetailContent-2
+        .container
+            ul#myList-2.list-group.list-group-tab.sNavLink-2(role='tablist')
+                li: a.active(data-toggle='list', href='#navTab3', role='tab') 
+                    span SẢN PHẨM TƯƠNG TỰ
+                li: a(data-toggle='list', href='#navTab4', role='tab') 
+                    span Sản phẩm mua kèm
+        .tab-content
+            #navTab3.tab-pane.active(role='tabpanel')
+                .container
+                    .sSliderRelate.sProducList-2.sBoxProduct
+                        - for (var x = 1; x < 7; x++)
+                            .item
+                                .itemWrap
+                                    .image
+                                        a(href="#"): img(src=imgPath + 'img06.png' alt="")
+                                    .info
+                                        h3: a(href="#") Combo món ngọt : Bột mì, bột gạo, kem nguyên 
+                                        .price 
+                                            span.txt-new 637.500đ
+                                                span.txt-old 850.500đ
+            #navTab4.tab-pane(role='tabpanel')
+                .container
+                    .sSliderRelate.sProducList-2.sBoxProduct
+                        - for (var x = 1; x < 7; x++)
+                            .item
+                                .itemWrap
+                                    .image
+                                        a(href="#"): img(src=imgPath + 'img06.png' alt="")
+                                    .info
+                                        h3: a(href="#") Combo món ngọt : Bột mì, bột gạo, kem nguyên 
+                                        .price 
+                                            span.txt-new 637.500đ
+                                                span.txt-old 850.500đ

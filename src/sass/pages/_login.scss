@@ -31,6 +31,12 @@
         max-width: 100%;
         width: 100%;
       }
+      @include media-breakpoint-down(md) {
+        text-align: center;
+        img{
+          max-width: 250px;
+        }
+      }
     }
   }
 
@@ -56,6 +62,11 @@
         height: rem(42);
         border-radius: 3px;
       }
+    }
+    @include media-breakpoint-down(md) {
+      border-left: none;
+      padding-left: 0;
+      margin-top:rem(20);
     }
   }
 
@@ -107,13 +118,20 @@
 
 .sCartFix {
   position: fixed;
-  right: 0;
+  right: -100%;
   top: 0;
   bottom: 0;
   width: 460px;
   background: #FAFAFA;
   z-index: 1000;
-
+  @include transition();
+  @include media-breakpoint-down(md) {
+    width:300px;
+  }
+  &.active{
+    right: 0;
+    z-index: 9999;
+  }
   &Inner {
     padding: rem(20);
     overflow: auto;

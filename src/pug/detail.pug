@@ -14,9 +14,9 @@ block content
                 .col-md-7
                     h3.title-page Vì sao bạn nên chọn sử dụng Gas24h: an toàn, đa dạng, bảo hành, đại lý rộng khắp
                     .row.grp-date
-                        .col-sm-6
+                        .col-6
                             .date 12/9/2019
-                        .col-sm-6
+                        .col-6
                             .share
                                 label Chia sẻ bài viết: 
                                 a(href="#")
@@ -40,15 +40,17 @@ block content
                 .col-md-3.ml-auto
                     .page-header-4 Khuyến mãi nổi bật
                     .sNewGrid-2
-                        - for (var x = 1; x < 5; x++)
-                            .item   
-                                .itemWrap      
-                                    .image
-                                        a(href="#"): img(src=imgPath + 'img08.png' alt="")
-                                    .info
-                                        h4: a(href="#") Ra mắt ứng dụng Gas24h – Đặt gas chỉ qua một chạm    
-                                        .date 12/9/2019 - 15/9/2019
-                                        p Nhanh chóng, tiện lợi, trả tiền trực tiếp khi nhận gas, còn được tích lũy tiền cho lần mua sau
+                        .row
+                            - for (var x = 1; x < 5; x++)
+                                .col-lg-12.col-6
+                                    .item   
+                                        .itemWrap      
+                                            .image
+                                                a(href="#"): img(src=imgPath + 'img08.png' alt="")
+                                            .info
+                                                h4: a(href="#") Ra mắt ứng dụng Gas24h – Đặt gas chỉ qua một chạm    
+                                                .date 12/9/2019 - 15/9/2019
+                                                p Nhanh chóng, tiện lợi, trả tiền trực tiếp khi nhận gas, còn được tích lũy tiền cho lần mua sau
                     .page-header-4 Từ khoá nổi bật
                     .sTag
                         a(href="#") Đặt Gas24h

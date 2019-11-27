@@ -55,6 +55,24 @@ $(function($) {
             elUl.stop().slideDown(200)
         }
     })
+
+    $btnCart = $('.btn-cart-menu');
+    $btnClose = $('.btn-close');
+    $btnCart.bind('click', function(e) {
+        var el = $(this);
+        el.addClass('active');
+        $('.sCartFix').addClass('active');
+        e.preventDefault();
+        $("body").prepend("<div class='overlap'></div>");
+
+    });
+    $btnClose.bind('click', function(e) {
+        $btnCart.removeClass('active');
+        $('.sCartFix').removeClass('active');
+        e.preventDefault();
+        $('.overlap').remove();
+    });
+   
 });
 function sBaner(){
     var el = $('.sBannerInner');
@@ -137,7 +155,16 @@ function sSliderNewsInner2(){
         dots: false,
         arrows: false,
         speed: 300,
-        variableWidth: true
+        variableWidth: true,
+        responsive: [
+            {
+                breakpoint: 640,
+                settings: {
+                    variableWidth: false
+                }
+              }
+         
+          ]
     });
 }
 

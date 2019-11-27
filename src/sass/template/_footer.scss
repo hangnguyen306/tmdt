@@ -72,6 +72,9 @@
         }
     }
     .sHotline {
+        @include media-breakpoint-down(md) {
+            margin-bottom: rem(20);
+        }
         a {
             background: #FD9C2C;
             border-radius: 58px;

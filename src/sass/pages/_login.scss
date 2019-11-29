@@ -124,6 +124,8 @@
   width: 460px;
   background: #FAFAFA;
   z-index: 1000;
+  height: 100%;
+  overflow: auto;
   @include transition();
   @include media-breakpoint-down(md) {
     width:300px;

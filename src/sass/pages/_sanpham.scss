@@ -629,6 +629,9 @@ ul.menuList {
   .sSliderImg {
     max-width: 400px;
     margin: 0 auto;
+    img{
+      max-width: 100%;
+    }
   }
 
   .imageSlidersmall {

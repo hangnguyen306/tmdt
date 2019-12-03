@@ -468,6 +468,11 @@ ul.menuList {
       position: absolute;
       top: 16px;
       right: 18px;
+      background: none;
+      color: #FD9C2C;
+      justify-content: right;
+      width: auto;
+      display: block
     }
   }
 
@@ -478,6 +483,21 @@ ul.menuList {
 
     .v-more-4 {
       font-size: rem(13);
+       background: none;
+      color: #FD9C2C;
+      justify-content: right;
+      width: auto;
+      display: block;
+    }
+    .itemAdd{
+      position: relative;
+      .custom-control.custom-radio {
+        top: 26px;
+        left: 0;
+      }
+      > .row{
+        padding-left: rem(20);
+      }
     }
   }
 
@@ -601,6 +621,7 @@ ul.menuList {
 }
 
 .sCartPage {
+  padding-bottom: 20px;
   .sBoxCartInner {
     background: white;
     margin-top: rem(15);
@@ -820,5 +841,15 @@ ul.menuList {
         }
       }
     }
+  }
+}
+.form-style-2{
+  .v-more-4{
+    font-size: 0.8125rem;
+    background: none;
+    color: #FD9C2C;
+    justify-content: right;
+    width: auto;
+    display: block;
   }
 }

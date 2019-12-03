@@ -15060,12 +15060,29 @@ ul.menuList {
   .sPayment .title .v-more-4 {
     position: absolute;
     top: 16px;
-    right: 18px; }
+    right: 18px;
+    background: none;
+    color: #FD9C2C;
+    justify-content: right;
+    width: auto;
+    display: block; }
 
 .sPayment .info {
   padding: 1.25rem; }
   .sPayment .info .v-more-4 {
-    font-size: 0.8125rem; }
+    font-size: 0.8125rem;
+    background: none;
+    color: #FD9C2C;
+    justify-content: right;
+    width: auto;
+    display: block; }
+  .sPayment .info .itemAdd {
+    position: relative; }
+    .sPayment .info .itemAdd .custom-control.custom-radio {
+      top: 26px;
+      left: 0; }
+    .sPayment .info .itemAdd > .row {
+      padding-left: 1.25rem; }
 
 .sPayment .form-style > .row {
   margin: 0 0 1.25rem 0; }
@@ -15149,19 +15166,21 @@ ul.menuList {
     padding-right: 10px;
     cursor: pointer; }
 
-.sCartPage .sBoxCartInner {
-  background: white;
-  margin-top: 0.9375rem; }
-  .sCartPage .sBoxCartInner h4 {
-    color: #BD192B;
-    font-size: 1.125rem;
-    margin: 0;
-    font-weight: bold; }
-  .sCartPage .sBoxCartInner span.txt-7 {
-    font-size: 0.75rem;
-    color: #808084; }
-  .sCartPage .sBoxCartInner .form-style-2 {
-    font-size: 0.75rem; }
+.sCartPage {
+  padding-bottom: 20px; }
+  .sCartPage .sBoxCartInner {
+    background: white;
+    margin-top: 0.9375rem; }
+    .sCartPage .sBoxCartInner h4 {
+      color: #BD192B;
+      font-size: 1.125rem;
+      margin: 0;
+      font-weight: bold; }
+    .sCartPage .sBoxCartInner span.txt-7 {
+      font-size: 0.75rem;
+      color: #808084; }
+    .sCartPage .sBoxCartInner .form-style-2 {
+      font-size: 0.75rem; }
 
 .sProductDetail {
   margin-top: 1.875rem; }
@@ -15302,6 +15321,14 @@ ul.menuList {
         color: #000; }
         .sNavLink-2 li a.active:after {
           opacity: 1; }
+
+.form-style-2 .v-more-4 {
+  font-size: 0.8125rem;
+  background: none;
+  color: #FD9C2C;
+  justify-content: right;
+  width: auto;
+  display: block; }
 
 .sMainContentGray {
   background: #E5E5E5;
